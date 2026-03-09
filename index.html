@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website of a cybersecurity and software engineering student focused on Python development and practical security."
+    />
+    <meta
+      name="keywords"
+      content="cybersecurity, software engineering, python developer, web security, student portfolio"
+    />
+    <meta name="author" content="Alekhya Nimmala" />
+    <meta property="og:title" content="Alekhya Nimmala | Cybersecurity Portfolio" />
+    <meta
+      property="og:description"
+      content="Cybersecurity Student | Python Developer | Security Enthusiast"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourusername.github.io/portfolio/" />
+    <title>Alekhya Nimmala | Cybersecurity Portfolio</title>
+
+    <!-- Tailwind CSS CDN (fast start; can be swapped for build pipeline later) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#ecfeff",
+                400: "#22d3ee",
+                500: "#06b6d4",
+                600: "#0891b2"
+              },
+              slatex: {
+                950: "#020617"
+              }
+            },
+            boxShadow: {
+              glow: "0 0 25px rgba(34, 211, 238, 0.18)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500/30">
+    <a href="#about" class="skip-link">Skip to main content</a>
+
+    <!-- Scroll progress bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Background visuals -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <!-- Edit your brand text here -->
+        <a href="#home" class="text-sm font-semibold tracking-wide text-white">ALEKHYA<span class="text-brand-400">.dev</span></a>
+
+        <button
+          id="menu-toggle"
+          class="inline-flex items-center rounded-md border border-white/20 px-3 py-2 text-sm text-slate-200 md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          Menu
+        </button>
+
+        <ul class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#journey">Journey</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-900/95 md:hidden">
+        <ul class="space-y-1 px-4 py-3 text-sm text-slate-200">
+          <li><a class="mobile-link block rounded px-2 py-2" href="#about">About</a></li>
+          <li><a class="mobile-link block rounded px-2 py-2" href="#skills">Skills</a></li>
+          <li><a class="mobile-link block rounded px-2 py-2" href="#projects">Projects</a></li>
+          <li><a class="mobile-link block rounded px-2 py-2" href="#journey">Journey</a></li>
+          <li><a class="mobile-link block rounded px-2 py-2" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="home" class="relative">
+      <!-- Hero Section -->
+      <section class="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-4 pb-20 pt-28 sm:px-6">
+        <p class="reveal mb-3 text-sm uppercase tracking-[0.2em] text-brand-400">Cybersecurity & Software Engineering</p>
+        <p class="reveal badge mt-2 w-fit">Open to internships and security-focused opportunities</p>
+        <!-- Edit your name/title/tagline below -->
+        <h1 class="reveal max-w-4xl text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl">
+          Hi, I'm <span class="text-brand-400">Alekhya Nimmala</span>
+        </h1>
+        <p class="reveal mt-4 max-w-3xl text-lg font-medium text-slate-200 sm:text-xl">
+          Cybersecurity Student | Python Developer | Security Enthusiast
+        </p>
+        <p class="reveal mt-4 max-w-2xl text-base text-slate-400">
+          Aspiring cybersecurity engineer focused on building secure systems and learning ethical hacking.
+        </p>
+        <div class="reveal mt-5 flex flex-wrap gap-2">
+          <span class="info-pill">Python Security Tools</span>
+          <span class="info-pill">Web Vulnerability Analysis</span>
+          <span class="info-pill">Linux and Networking Foundations</span>
+        </div>
+        <div class="reveal mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+        <div class="reveal mt-9 grid gap-3 sm:grid-cols-3">
+          <article class="hero-metric">
+            <p class="hero-metric-label">Primary Focus</p>
+            <p class="hero-metric-value">Secure Software Development</p>
+          </article>
+          <article class="hero-metric">
+            <p class="hero-metric-label">Current Track</p>
+            <p class="hero-metric-value">Python + Security Fundamentals</p>
+          </article>
+          <article class="hero-metric">
+            <p class="hero-metric-label">Career Direction</p>
+            <p class="hero-metric-value">Cybersecurity Engineering</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-wrap">
+        <div class="section-card reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-copy">
+            I am a cybersecurity enthusiast currently learning Python and security fundamentals. My focus is on understanding how systems break and how to build them more securely. I am actively working on hands-on projects in Python, security tools, and web vulnerabilities. My goal is to contribute to open-source security projects, gain practical experience through internships, and eventually work in advanced cybersecurity roles.
+          </p>
+          <div class="mt-6">
+            <h3 class="text-base font-semibold text-white">Professional Strengths</h3>
+            <ul class="section-copy mt-2 list-disc pl-5">
+              <li>Consistent hands-on learning with security-focused mini projects</li>
+              <li>Strong interest in secure coding and practical attack/defense concepts</li>
+              <li>Clear long-term roadmap toward advanced cybersecurity roles</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section-wrap">
+        <div class="reveal mb-8">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-copy">Core technologies and tools I currently use.</p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Programming -->
+          <article class="skill-card reveal">
+            <h3 class="skill-heading">Programming</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>Bash (Learning)</li>
+            </ul>
+          </article>
+
+          <!-- Security -->
+          <article class="skill-card reveal">
+            <h3 class="skill-heading">Security</h3>
+            <ul class="skill-list">
+              <li>Web Security Fundamentals</li>
+              <li>Linux Basics</li>
+              <li>Networking Basics</li>
+              <li>OWASP Top 10 (Learning)</li>
+            </ul>
+          </article>
+
+          <!-- Tools -->
+          <article class="skill-card reveal">
+            <h3 class="skill-heading">Tools</h3>
+            <ul class="skill-list">
+              <li>Git & GitHub</li>
+              <li>Linux</li>
+              <li>VS Code</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section-wrap">
+        <div class="reveal mb-8">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-copy">Hands-on cybersecurity projects focused on practical tooling, secure development, and system-level learning.</p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="project-card reveal">
+            <p class="project-status">In Progress</p>
+            <h3 class="project-title">Python Port Scanner</h3>
+            <p class="project-description">
+              A command line tool that scans open ports on a target host to identify exposed services.
+            </p>
+            <p class="project-tech">Tech: Python, Socket Programming</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="project-link link-placeholder">GitHub (Add Link)</a>
+              <a href="#" class="project-link link-placeholder">Live Demo (Optional)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-status">In Progress</p>
+            <h3 class="project-title">Password Strength Checker</h3>
+            <p class="project-description">
+              A Python tool that analyzes password strength using entropy and common password lists.
+            </p>
+            <p class="project-tech">Tech: Python</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="project-link link-placeholder">GitHub (Add Link)</a>
+              <a href="#" class="project-link link-placeholder">Live Demo (Optional)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-status">Educational Project</p>
+            <h3 class="project-title">Simple Keylogger (Educational)</h3>
+            <p class="project-description">
+              A Python-based keylogger built to understand how malicious software works and how to defend against it.
+            </p>
+            <p class="project-tech">Tech: Python</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="project-link link-placeholder">GitHub (Add Link)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-status">In Progress</p>
+            <h3 class="project-title">Network Packet Sniffer</h3>
+            <p class="project-description">
+              A Python tool that captures and analyzes network packets for learning network security.
+            </p>
+            <p class="project-tech">Tech: Python, Scapy</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="project-link link-placeholder">GitHub (Add Link)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-status">Documentation</p>
+            <h3 class="project-title">Linux Security Setup Guide</h3>
+            <p class="project-description">
+              A documentation project explaining how to secure a Linux machine using best practices.
+            </p>
+            <p class="project-tech">Tech: Markdown, Linux</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="project-link link-placeholder">GitHub (Add Link)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <p class="project-status">Learning Project</p>
+            <h3 class="project-title">Basic Vulnerability Scanner (Learning Project)</h3>
+            <p class="project-description">
+              A Python script that checks websites for basic vulnerabilities such as open ports and outdated services.
+            </p>
+            <p class="project-tech">Tech: Python</p>
+            <div class="mt-4 flex gap-3">
+              <a href="#" class="project-link link-placeholder">GitHub (Add Link)</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience / Learning Journey -->
+      <section id="journey" class="section-wrap">
+        <div class="reveal mb-8">
+          <h2 class="section-title">Learning Journey & Career Goals</h2>
+          <p class="section-copy">A structured roadmap showing my growth, current focus, and next milestones.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-date">2026</span>
+            <h3 class="timeline-title">Started Cybersecurity Journey</h3>
+            <p class="timeline-copy">Began learning Python, Linux, and networking fundamentals to build a strong base in cybersecurity.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-date">2026</span>
+            <h3 class="timeline-title">Security Tools & Projects</h3>
+            <p class="timeline-copy">Started building small security tools like port scanners and packet sniffers.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-date">2026 Summer (Goal)</span>
+            <h3 class="timeline-title">Cybersecurity Internship</h3>
+            <p class="timeline-copy">Aiming to gain practical experience through security internships and bug bounty practice.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-date">2027 (Goal)</span>
+            <h3 class="timeline-title">Open Source Security Contributions</h3>
+            <p class="timeline-copy">Plan to contribute to security projects such as OWASP tools.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section-wrap pb-20">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="section-card reveal">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-copy mb-4">Open to cybersecurity internships, collaboration opportunities, and technical networking.</p>
+            <!-- Edit contact links -->
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li>Email: <a class="contact-link" href="mailto:alekhyanimmala4001@gmail.com">alekhyanimmala4001@gmail.com</a></li>
+              <li>GitHub: <a class="contact-link link-placeholder" href="#" rel="noopener noreferrer">Add GitHub URL Later</a></li>
+              <li>LinkedIn: <a class="contact-link link-placeholder" href="#" rel="noopener noreferrer">Add LinkedIn URL Later</a></li>
+            </ul>
+            <p class="mt-5 text-sm text-slate-400">Response time: Usually within 24-48 hours.</p>
+          </div>
+
+          <form id="contact-form" class="section-card reveal">
+            <h3 class="text-lg font-semibold text-white">Send a Message</h3>
+            <p class="mb-4 mt-1 text-sm text-slate-400">No backend needed: this form opens your email app with a pre-filled message.</p>
+
+            <label class="mb-2 block text-sm text-slate-300" for="name">Name</label>
+            <input class="form-input" id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label class="mb-2 mt-4 block text-sm text-slate-300" for="email">Email</label>
+            <input class="form-input" id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label class="mb-2 mt-4 block text-sm text-slate-300" for="message">Message</label>
+            <textarea class="form-input min-h-28 resize-y" id="message" name="message" placeholder="Your message..." required></textarea>
+
+            <button class="btn-primary mt-5 w-full justify-center" type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-slate-950/80">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-slate-400 sm:flex-row sm:px-6">
+        <p>&copy; <span id="year"></span> Alekhya Nimmala. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="contact-link link-placeholder" href="#" rel="noopener noreferrer">GitHub</a>
+          <a class="contact-link link-placeholder" href="#" rel="noopener noreferrer">LinkedIn</a>
+          <a class="contact-link" href="mailto:alekhyanimmala4001@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
